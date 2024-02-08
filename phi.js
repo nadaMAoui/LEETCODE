@@ -11,3 +11,16 @@ function Phi(tab) {
   );
 }
 console.log(Phi());
+//extract a two-by-two table for a specific event from the journal
+function correlation(event, journal) {
+  let table = [0, 0, 0, 0];
+  for (let i = 0; i < journal.length; i++) {
+    let entry = journal[i],
+      index = 0;
+    // create simple binary representation
+    if (entry.events.includes(event)) index += 1;
+    if (entry.squirrel) index += 2;
+    table[index] += 1;
+  }
+  return table;
+}
