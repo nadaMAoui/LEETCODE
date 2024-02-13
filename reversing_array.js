@@ -18,12 +18,17 @@ function reversing(array) {
   return res;
 }
 console.log(reverseArray([1, 2, 3, 4, 5]));
+console.time("reverseArray");
+console.timeEnd("reverseArray"); //reversArrayInPlace: 0.0062ms
+
 //create pure reverse function
 function reversArrayInPlace(array) {
   let res = [];
-  for (let i = array.length; i >= 0; i -= 1) {
+  for (let i = array.length - 1; i >= 0; i -= 1) {
     res.push(array[i]);
   }
-  return res.slice();
+  return res.slice("");
 }
-console.log(reverseArray([1, 2, 3, 4, 5]));
+console.log(reversArrayInPlace([1, 2, 3, 4, 5]));
+console.time("reversArrayInPlace");
+console.timeEnd("reversArrayInPlace"); //reversArrayInPlace: 0.003ms
