@@ -7,9 +7,14 @@ function repeat(n) {
 repeat(10);
 console.log();
 // reapeat function using high order function
-function reapeatLog(n, action) {
+function repeatLog(n, action) {
   for (let i = 0; i < n; i++) {
     action(i);
   }
 }
-reapeatLog(10, console.log);
+//repeatLog(10, console.log);
+let labels = [];
+repeatLog(5, (i) => {
+  labels.push(`unit${i + 1}`);
+});
+console.log(labels);
