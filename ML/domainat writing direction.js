@@ -11,5 +11,5 @@ function scriptAnalyser(text) {
   return dominantDirection;
 }
 
-const result = scriptAnalyser("Hello i'm a preparatory student أمريكا");
+const result = scriptAnalyser("Hello i'm a preparatory student");
 console.log(result);
